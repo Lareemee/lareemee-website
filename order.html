@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order | La Reemée</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">
+        <div class="logo-text">La Reemée</div>
+        <div class="logo-subtitle">Baked Goods</div>
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="order.html">🛒 Cart</a>
+    </nav>
+</header>
+
+<section class="order-hero">
+    <p class="section-label">Pre-Order</p>
+    <h1>Your Cart</h1>
+    <p>Build your order, choose your pickup window, and send your request.</p>
+</section>
+
+<section id="sold-out-banner" class="sold-out-banner">
+    <h2>Sold Out for This Weekend</h2>
+    <p>
+        Thank you for your support. Our weekend preorder capacity has been reached.
+        Please check back for the next available pickup weekend.
+    </p>
+</section>
+
+<section class="order-page">
+
+
+    <div class="cart-summary">
+
+        <h2>Order Summary</h2>
+
+        <h3 class="order-subtitle">Single Rolls</h3>
+
+<p class="cart-note four-pack-description">
+    Maximum 3 Rolls
+</p>
+
+        <div class="cart-item">
+            <div>
+                <h3>Classic</h3>
+                <p>$5.50 each</p>
+            </div>
+            <input class="single-input" data-price="5.50" type="number" min="0" max="3" value="0">
+        </div>
+
+        <div class="cart-item">
+            <div>
+                <h3>Blueberry Lemon</h3>
+                <p>$6.00 each</p>
+            </div>
+            <input class="single-input" data-price="5.50" type="number" min="0" max="3" value="0">
+        </div>
+
+        <div class="cart-item">
+            <div>
+                <h3>Biscoff Cookie Butter</h3>
+                <p>$6.00 each</p>
+            </div>
+            <input class="single-input" data-price="6.00" type="number" min="0" max="3" value="0">
+        </div>
+
+        <div class="cart-item">
+            <div>
+                <h3>Tiramisu</h3>
+                <p>$6.50 each</p>
+            </div>
+            <input class="single-input" data-price="6.50" type="number" min="0" max="3" value="0">
+        </div>
+
+        <p id="single-warning" class="warning-message"></p>
+
+        <h3 class="order-subtitle">Signature 4-Pack</h3>
+        <p class="cart-note">
+            Mix & Match Any 4 Flavors — Maximum 3 boxes per order.
+        </p>
+
+        <div class="cart-item">
+            <div>
+                <h3>Number of 4-Packs</h3>
+                <p>$18.99 each</p>
+            </div>
+            <input id="four-pack-count" type="number" min="0" max="3" value="0">
+        </div>
+
+        <div class="four-pack-builder">
+            <p class="cart-note">
+                Choose flavors for your 4-pack box. Total rolls must equal 4 per box.
+            </p>
+
+            <div class="cart-item">
+                <div>
+                    <h3>Classic</h3>
+                </div>
+                <input class="box-input" type="number" min="0" max="12" value="0">
+            </div>
+
+            <div class="cart-item">
+                <div>
+                    <h3>Blueberry Lemon</h3>
+                </div>
+                <input class="box-input" type="number" min="0" max="12" value="0">
+            </div>
+
+            <div class="cart-item">
+                <div>
+                    <h3>Biscoff Cookie Butter</h3>
+                </div>
+                <input class="box-input" type="number" min="0" max="12" value="0">
+            </div>
+
+            <div class="cart-item">
+                <div>
+                    <h3>Tiramisu</h3>
+                </div>
+                <input class="box-input" type="number" min="0" max="12" value="0">
+            </div>
+
+            <p id="box-warning" class="warning-message"></p>
+        </div>
+
+        <div class="estimated-total">
+            <h3>Estimated Total</h3>
+            <p id="order-total">$0.00</p>
+        </div>
+
+    </div>
+
+    <form class="checkout-form"
+      id="checkout-form"
+      action="https://formspree.io/f/mnjyjzvg"
+      method="POST">
+
+        <h2>Pickup Details</h2>
+
+<label for="pickup-day">Pickup Day</label>
+<select id="pickup-day" name="pickup_day" required>
+    <option value="">Select pickup day</option>
+    <option value="saturday">Saturday</option>
+    <option value="sunday">Sunday</option>
+</select>
+
+<label for="pickup-time">Pickup Time</label>
+<select id="pickup-time" name="pickup_time" required>
+    <option value="">Select pickup day first</option>
+</select>
+
+        <p class="order-deadline">
+            Orders close every Thursday at 10:00 AM for weekend pickup.
+        </p>
+
+        <h2>Customer Information</h2>
+
+    <label for="customer-first-name">First Name</label>
+<input
+    id="customer-first-name"
+    name="customer_first_name"
+    type="text"
+    placeholder="First name"
+    required>
+
+<label for="customer-last-name">Last Name</label>
+<input
+    id="customer-last-name"
+    name="customer_last_name"
+    type="text"
+    placeholder="Last name"
+    required>
+
+<label for="customer-email">Email</label>
+<input
+    id="customer-email"
+    name="customer_email"
+    type="email"
+    placeholder="Your email"
+    required>
+
+<label for="customer-phone">Phone</label>
+<input
+    id="customer-phone"
+    name="customer_phone"
+    type="tel"
+    placeholder="Your phone number"
+    required>
+
+<label for="order-notes">Special Requests</label>
+<textarea
+    id="order-notes"
+    name="order_notes"
+    placeholder="Any notes for your order?"></textarea>
+
+
+    <input type="hidden" name="_subject" value="New La Reemée Order">
+    <input type="hidden" name="estimated_total" id="hidden-total">
+    <input type="hidden" name="order_summary" id="hidden-order-summary">
+    
+
+        <button id="submit-order" type="submit">Submit Order</button>
+
+    </form>
+
+</section>
+
+<footer>
+    <p>© 2026 La Reemée Baked Goods</p>
+</footer>
+
+<script>
+    const isSoldOut = false;
+    const soldOutBanner = document.getElementById("sold-out-banner");
+    const pickupDay = document.getElementById("pickup-day");
+    const pickupTime = document.getElementById("pickup-time");
+
+    const pickupTimes = {
+        saturday: [
+            "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
+            "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM",
+            "2:00 PM", "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM"
+        ],
+        sunday: [
+            "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
+            "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM",
+            "2:00 PM", "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM"
+        ]
+    };
+
+    pickupDay.addEventListener("change", function () {
+        const selectedDay = pickupDay.value;
+        pickupTime.innerHTML = "";
+
+        if (!selectedDay) {
+            pickupTime.innerHTML = '<option value="">Select pickup day first</option>';
+            return;
+        }
+
+        pickupTime.innerHTML = '<option value="">Select pickup time</option>';
+
+        pickupTimes[selectedDay].forEach(function (time) {
+            const option = document.createElement("option");
+            option.value = time;
+            option.textContent = time;
+            pickupTime.appendChild(option);
+        });
+    });
+
+    const singleInputs = document.querySelectorAll(".single-input");
+    const boxInputs = document.querySelectorAll(".box-input");
+    const fourPackCount = document.getElementById("four-pack-count");
+    const orderTotal = document.getElementById("order-total");
+    const singleWarning = document.getElementById("single-warning");
+    const boxWarning = document.getElementById("box-warning");
+    const submitOrder = document.getElementById("submit-order");
+    const checkoutForm = document.getElementById("checkout-form");
+    const hiddenTotal = document.getElementById("hidden-total");
+    const hiddenOrderSummary = document.getElementById("hidden-order-summary");
+
+    let currentOrderIsValid = false;
+
+    function updateTotal() {
+        let singlesTotal = 0;
+        let singlesCount = 0;
+        let orderIsValid = true;
+
+        singleInputs.forEach(function (input) {
+            let quantity = Number(input.value);
+
+            if (quantity < 0) {
+                quantity = 0;
+                input.value = 0;
+            }
+
+            const price = Number(input.dataset.price);
+
+            singlesCount += quantity;
+            singlesTotal += quantity * price;
+        });
+
+        if (singlesCount > 3) {
+            singleWarning.textContent = "Single-roll orders are limited to 3 total. For 4 or more rolls, please order a Signature 4-Pack.";
+            orderIsValid = false;
+        } else {
+            singleWarning.textContent = "";
+        }
+
+        let boxCount = Number(fourPackCount.value);
+
+        if (boxCount < 0) {
+            boxCount = 0;
+            fourPackCount.value = 0;
+        }
+
+        if (boxCount > 3) {
+            boxCount = 3;
+            fourPackCount.value = 3;
+        }
+
+        let boxRollTotal = 0;
+
+        boxInputs.forEach(function (input) {
+            let quantity = Number(input.value);
+
+            if (quantity < 0) {
+                quantity = 0;
+                input.value = 0;
+            }
+
+            if (quantity > 12) {
+                quantity = 12;
+                input.value = 12;
+            }
+
+            boxRollTotal += quantity;
+        });
+
+        const requiredBoxRolls = boxCount * 4;
+
+        if (boxRollTotal > 12) {
+            boxWarning.textContent = "Signature 4-Pack flavor selections are limited to 12 rolls total.";
+            orderIsValid = false;
+        } else if (boxCount > 0 && boxRollTotal !== requiredBoxRolls) {
+            boxWarning.textContent = "Your 4-pack flavors must total " + requiredBoxRolls + " rolls.";
+            orderIsValid = false;
+        } else if (boxCount === 0 && boxRollTotal > 0) {
+            boxWarning.textContent = "Please select the number of 4-packs before choosing box flavors.";
+            orderIsValid = false;
+        } else {
+            boxWarning.textContent = "";
+        }
+
+        const fourPackTotal = boxCount * 18.99;
+        const total = singlesTotal + fourPackTotal;
+
+        orderTotal.textContent = "$" + total.toFixed(2);
+        hiddenTotal.value = "$" + total.toFixed(2);
+
+        if (total === 0) {
+    orderIsValid = false;
+}
+
+/* SOLD OUT CHECK */
+
+const orderPage = document.querySelector(".order-page");
+
+if (isSoldOut) {
+    soldOutBanner.style.display = "block";
+    orderPage.style.display = "none";
+    orderIsValid = false;
+} else {
+    soldOutBanner.style.display = "none";
+    orderPage.style.display = "grid";
+}
+
+currentOrderIsValid = orderIsValid;
+submitOrder.disabled = !orderIsValid;
+
+if (!orderIsValid) {
+    submitOrder.classList.add("disabled-btn");
+} else {
+    submitOrder.classList.remove("disabled-btn");
+}
+
+}
+
+    singleInputs.forEach(function (input) {
+        input.addEventListener("input", updateTotal);
+    });
+
+    boxInputs.forEach(function (input) {
+        input.addEventListener("input", updateTotal);
+    });
+
+    fourPackCount.addEventListener("input", updateTotal);
+
+checkoutForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    if (!checkoutForm.checkValidity()) {
+        checkoutForm.reportValidity();
+        return;
+    }
+
+    updateTotal();
+
+    if (!currentOrderIsValid) {
+        alert("Please fix the order limits before submitting.");
+        return;
+    }
+
+    let summary = "";
+
+    summary += "SINGLES\n";
+
+    if (Number(singleInputs[0].value) > 0) {
+        summary += "Classic: " + singleInputs[0].value + "\n";
+    }
+
+    if (Number(singleInputs[1].value) > 0) {
+        summary += "Blueberry Lemon: " + singleInputs[1].value + "\n";
+    }
+
+    if (Number(singleInputs[2].value) > 0) {
+        summary += "Biscoff Cookie Butter: " + singleInputs[2].value + "\n";
+    }
+
+    if (Number(singleInputs[3].value) > 0) {
+        summary += "Tiramisu: " + singleInputs[3].value + "\n";
+    }
+
+    if (
+        Number(singleInputs[0].value) === 0 &&
+        Number(singleInputs[1].value) === 0 &&
+        Number(singleInputs[2].value) === 0 &&
+        Number(singleInputs[3].value) === 0
+    ) {
+        summary += "No single rolls selected.\n";
+    }
+
+    summary += "\nSIGNATURE 4-PACK\n";
+
+    if (Number(fourPackCount.value) > 0) {
+        summary += "Number of 4-Packs: " + fourPackCount.value + "\n";
+
+        if (Number(boxInputs[0].value) > 0) {
+            summary += "Classic: " + boxInputs[0].value + "\n";
+        }
+
+        if (Number(boxInputs[1].value) > 0) {
+            summary += "Blueberry Lemon: " + boxInputs[1].value + "\n";
+        }
+
+        if (Number(boxInputs[2].value) > 0) {
+            summary += "Biscoff Cookie Butter: " + boxInputs[2].value + "\n";
+        }
+
+        if (Number(boxInputs[3].value) > 0) {
+            summary += "Tiramisu: " + boxInputs[3].value + "\n";
+        }
+    } else {
+        summary += "No Signature 4-Pack selected.\n";
+    }
+
+    summary += "\nPICKUP\n";
+    summary += "Pickup Day: " + pickupDay.options[pickupDay.selectedIndex].text + "\n";
+    summary += "Pickup Time: " + pickupTime.value + "\n\n";
+
+    summary += "TOTAL\n";
+    summary += orderTotal.textContent;
+
+    hiddenOrderSummary.value = summary;
+
+    const formData = new FormData(checkoutForm);
+
+    try {
+        const response = await fetch(checkoutForm.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+
+        if (response.ok) {
+            window.location.href = "thank-you.html";
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+    } catch (error) {
+        alert("There was a connection problem. Please try again.");
+    }
+});
+
+    updateTotal();
+</script>
+
+</body>
+</html>
