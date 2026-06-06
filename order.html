@@ -146,77 +146,94 @@
     </div>
 
     <form class="checkout-form"
-      id="checkout-form"
-      action="https://formspree.io/f/mnjyjzvg"
-      method="POST">
+  id="checkout-form"
+  action="https://formspree.io/f/mnjyjzvg"
+  method="POST">
 
-        <h2>Pickup Details</h2>
+    <h2>Pre-Order Request</h2>
 
-<label for="pickup-day">Pickup Day</label>
-<select id="pickup-day" name="pickup_day" required>
-    <option value="">Select pickup day</option>
-    <option value="saturday">Saturday</option>
-    <option value="sunday">Sunday</option>
-</select>
+    <p class="preorder-message">
+        Please complete the form below to request your cinnamon roll order.
+        After submitting, we will review your request and send a confirmation
+        with your pickup details.
+    </p>
 
-<label for="pickup-time">Pickup Time</label>
-<select id="pickup-time" name="pickup_time" required>
-    <option value="">Select pickup day first</option>
-</select>
+    <p class="payment-notice">
+        Payment is not collected on the website at this time. 
+        A deposit is required once you receive an order confirmation.
+        We currently accept Zelle or cash at pickup.
+    </p>
 
-        <p class="order-deadline">
-            Orders close every Thursday at 10:00 AM for weekend pickup.
-        </p>
+    <h2>Pickup Details</h2>
 
-        <h2>Customer Information</h2>
+    <label for="pickup-day">Pickup Day</label>
+    <select id="pickup-day" name="pickup_day" required>
+        <option value="">Select pickup day</option>
+        <option value="saturday">Saturday</option>
+        <option value="sunday">Sunday</option>
+    </select>
+
+    <label for="pickup-time">Pickup Time</label>
+    <select id="pickup-time" name="pickup_time" required>
+        <option value="">Select pickup day first</option>
+    </select>
+
+    <p class="order-deadline">
+        Orders close every Thursday at 10:00 AM for weekend pickup.
+    </p>
+
+    <h2>Customer Information</h2>
 
     <label for="customer-first-name">First Name</label>
-<input
-    id="customer-first-name"
-    name="customer_first_name"
-    type="text"
-    placeholder="First name"
-    required>
+    <input
+        id="customer-first-name"
+        name="customer_first_name"
+        type="text"
+        placeholder="First name"
+        required>
 
-<label for="customer-last-name">Last Name</label>
-<input
-    id="customer-last-name"
-    name="customer_last_name"
-    type="text"
-    placeholder="Last name"
-    required>
+    <label for="customer-last-name">Last Name</label>
+    <input
+        id="customer-last-name"
+        name="customer_last_name"
+        type="text"
+        placeholder="Last name"
+        required>
 
-<label for="customer-email">Email</label>
-<input
-    id="customer-email"
-    name="customer_email"
-    type="email"
-    placeholder="Your email"
-    required>
+    <label for="customer-email">Email</label>
+    <input
+        id="customer-email"
+        name="customer_email"
+        type="email"
+        placeholder="Your email"
+        required>
 
-<label for="customer-phone">Phone</label>
-<input
-    id="customer-phone"
-    name="customer_phone"
-    type="tel"
-    placeholder="Your phone number"
-    required>
+    <label for="customer-phone">Phone</label>
+    <input
+        id="customer-phone"
+        name="customer_phone"
+        type="tel"
+        placeholder="Your phone number"
+        required>
 
-<label for="order-notes">Special Requests</label>
-<textarea
-    id="order-notes"
-    name="order_notes"
-    placeholder="Any notes for your order?"></textarea>
+    <label for="order-notes">Special Requests</label>
+    <textarea
+        id="order-notes"
+        name="order_notes"
+        placeholder="Any notes for your order?"></textarea>
 
-
-    <input type="hidden" name="_subject" value="New La Reemée Order">
+    <input type="hidden" name="_subject" value="New La Reemée Pre-Order Request">
     <input type="hidden" name="estimated_total" id="hidden-total">
     <input type="hidden" name="order_summary" id="hidden-order-summary">
-    
 
-        <button id="submit-order" type="submit">Submit Order</button>
+    <button id="submit-order" type="submit">Submit Pre-Order Request</button>
 
-    </form>
+    <p class="confirmation-note">
+        Submitting this form does not guarantee availability. Your order is confirmed
+        after you receive a confirmation from La Reemée.
+    </p>
+
+</form>
 
 </section>
 

@@ -1198,3 +1198,24 @@ footer {
         padding-bottom: 45px;
     }
 }
+.preorder-message,
+.payment-notice,
+.confirmation-note {
+    line-height: 1.6;
+    color: #3a2418;
+}
+
+.payment-notice {
+    background: #fff3df;
+    border: 1px solid #e7c59a;
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-weight: 600;
+    margin: 15px 0 25px;
+}
+
+.confirmation-note {
+    font-size: 0.95rem;
+    margin-top: 16px;
+    opacity: 0.85;
+}
