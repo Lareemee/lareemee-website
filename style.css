@@ -142,6 +142,9 @@ nav a:hover {
     box-shadow: 0 12px 30px rgba(75, 53, 39, 0.10);
     transition: all 0.3s ease;
     cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .flavor-card:hover {
@@ -172,12 +175,14 @@ nav a:hover {
 .flavor-card h3 {
     font-size: 26px;
     margin-bottom: 10px;
+    min-height: 70px;
 }
 
 .flavor-card p {
     font-size: 15px;
     line-height: 1.6;
     color: #6b4a35;
+    margin-top: auto;
 }
 
 /* ABOUT PAGE */
