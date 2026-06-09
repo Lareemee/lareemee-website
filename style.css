@@ -1224,3 +1224,28 @@ footer {
     margin-top: 16px;
     opacity: 0.85;
 }
+.contact-email-btn {
+    display: inline-block;
+    margin-top: 30px;
+    background: #4b1238;
+    color: white;
+    text-decoration: none;
+    padding: 15px 36px;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.contact-email-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+.email-note {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #6b4a35;
+}
+
+.email-note strong {
+    color: #4b1238;
+}
