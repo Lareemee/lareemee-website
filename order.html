@@ -81,7 +81,7 @@
 
         <div class="cart-item">
             <div>
-                <h3>Peach Cobbler</h3>
+                <h3>Turamisu</h3>
                 <p>$6.50 each</p>
             </div>
             <input class="single-input" data-price="6.50" type="number" min="0" max="3" value="0">
@@ -130,7 +130,7 @@
 
             <div class="cart-item">
                 <div>
-                    <h3>Peach Cobbler</h3>
+                    <h3>Tiramisu</h3>
                 </div>
                 <input class="box-input" type="number" min="0" max="12" value="0">
             </div>
@@ -444,7 +444,7 @@ checkoutForm.addEventListener("submit", async function (event) {
     }
 
     if (Number(singleInputs[3].value) > 0) {
-        summary += "Peach Cobbler: " + singleInputs[3].value + "\n";
+        summary += "Tiramisu: " + singleInputs[3].value + "\n";
     }
 
     if (
@@ -474,7 +474,7 @@ checkoutForm.addEventListener("submit", async function (event) {
         }
 
         if (Number(boxInputs[3].value) > 0) {
-            summary += "Peach Cobbler: " + boxInputs[3].value + "\n";
+            summary += "Tiramisu: " + boxInputs[3].value + "\n";
         }
     } else {
         summary += "No Signature 4-Pack selected.\n";
