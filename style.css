@@ -1249,3 +1249,14 @@ footer {
 .email-note strong {
     color: #4b1238;
 }
+
+.allergen-info {
+    margin: 15px 0 28px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #6b4a35;
+}
+
+.allergen-info strong {
+    color: #5a1248;
+}
