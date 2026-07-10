@@ -1276,3 +1276,292 @@ footer {
 .allergen-info strong {
     color: #5a1248;
 }
+
+/* ==========================
+    FREQUENTLY ASKED QUESTIONS
+========================== */
+
+.faq-section {
+    padding: 80px 8%;
+    background: #fffaf6;
+    text-align: center;
+}
+
+.faq-section .section-label {
+    margin: 0 0 14px;
+    color: #8a6851;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.faq-section h2 {
+    margin: 0;
+    color: #420e2e;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+.faq-intro {
+    margin: 14px auto 38px;
+    color: #8a6851;
+    font-size: 1.05rem;
+}
+
+.faq-list {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 24px;
+    box-sizing: border-box;
+    border: 1px solid rgba(138, 104, 81, 0.24);
+    border-radius: 24px;
+    background: rgba(237, 231, 224, 0.22);
+    box-shadow: 0 8px 24px rgba(66, 14, 46, 0.08);
+}
+
+.faq-item {
+    margin: 0 0 16px;
+    border: 1px solid rgba(138, 104, 81, 0.22);
+    border-radius: 16px;
+    background: #fffdfb;
+    overflow: hidden;
+    text-align: left;
+    transition: box-shadow 0.25s ease;
+}
+
+.faq-item:last-child {
+    margin-bottom: 0;
+}
+
+.faq-item:hover {
+    box-shadow: 0 8px 24px rgba(66, 14, 46, 0.08);
+}
+
+.faq-item summary {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 21px 58px 21px 24px;
+    color: #5f3d2f;
+    font-size: 1.08rem;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::marker {
+    display: none;
+    content: "";
+}
+
+.faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    color: #420E2E;
+    font-size: 1.65rem;
+    font-weight: 400;
+    transform: translateY(-50%);
+}
+
+.faq-item[open] summary::after {
+    content: "-";
+}
+
+.faq-item[open] summary {
+    border-bottom: 1px solid rgba(138, 104, 81, 0.18);
+}
+
+.faq-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    min-width: 28px;
+    font-size: 1.15rem;
+}
+
+.faq-answer {
+    padding: 20px 26px 22px 66px;
+}
+
+.faq-answer p {
+    margin: 0 0 12px;
+    color: #6f4c3b;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-answer a {
+    color: #420E2E;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.faq-answer a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+    .faq-section {
+        padding: 60px 20px;
+    }
+
+    .faq-list {
+        padding: 14px;
+        border-radius: 18px;
+    }
+
+    .faq-item summary {
+        padding: 18px 48px 18px 18px;
+        gap: 10px;
+        font-size: 1rem;
+    }
+
+    .faq-item summary::after {
+        right: 18px;
+    }
+
+    .faq-answer {
+        padding: 18px;
+    }
+}
+
+/* ====================================
+    ORDER PAGE - PAYMENT NOTICE
+==================================== */  
+
+.order-notice {
+    margin: 24px 0 30px;
+    padding: 22px 24px;
+    background: #ede7e0;
+    border: 1px solid rgba(66, 14, 46, 0.18);
+    border-left: 5px solid #420E3E;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(66, 14, 46, 0.08);
+}
+
+.order-notice h3 {
+    margin: 0 0 12px;
+    color: #420E2E;
+    font-size: 1.25rem;
+}
+
+.order-notice p {
+    margin: 0 0 10px;
+    color: #5f4638;
+    line-height: 1.7;
+}
+
+.order-notice p:last-child {
+    margin-bottom: 0;
+}
+
+/* =================================
+    CUSTOMER POLICY AGREEMENT
+================================= */
+
+.policy-agreement {
+    margin: 24px 0 18px;
+    padding: 18px 20px;
+    background: rgba(237, 231, 224, 0.65);
+    border: 1px solid rgba(138, 104, 81, 0.28);
+    border-radius: 14px
+}
+
+.policy-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    color: #4f3a30;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.policy-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    flex-shrink: 0;
+    accent-color: #420E2E;
+    cursor: pointer;
+}
+
+.policy-checkbox span {
+    display: block;
+}
+
+.policy-checkbox a {
+    color: #420E2E;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.policy-checkbox a:hover {
+    color: #8a6851;
+}
+
+/*==================================
+    ORDER CONFIRMATION NOTE
+================================= */    
+
+.confirmation-note {
+    margin: 16px 0 0;
+    padding: 14px 16px;
+    background: rgba(138, 104, 81, 0.1);
+    border-radius: 12px;
+    color: #5f4638;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/*=================================
+    ORDER FORM BUTTON SPACING
+================================ */
+
+#submit-order {
+    width: 100%;
+    margin-top: 4px;
+}
+
+/*=================================
+    MOBILE ADJUSTMENTS
+================================ */
+
+@media (max-width: 600px) {
+    .order-notice {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .policy-agreement {
+        padding: 16px;
+    }
+
+    .policy-checkbox {
+        gap: 10px;
+        font-size: 0.9rem;
+    }
+
+    .confirmation-note {
+        padding: 12px 14px;
+        font-size: 0.85rem;
+    }
+}

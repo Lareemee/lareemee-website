@@ -68,7 +68,7 @@
                 <h3>Blueberry Lemon</h3>
                 <p>$6.00 each</p>
             </div>
-            <input class="single-input" data-price="5.50" type="number" min="0" max="3" value="0">
+            <input class="single-input" data-price="6.00" type="number" min="0" max="3" value="0">
         </div>
 
         <div class="cart-item">
@@ -81,7 +81,7 @@
 
         <div class="cart-item">
             <div>
-                <h3>Turamisu</h3>
+                <h3>Tiramisu</h3>
                 <p>$6.50 each</p>
             </div>
             <input class="single-input" data-price="6.50" type="number" min="0" max="3" value="0">
@@ -154,20 +154,22 @@
 
     <p class="preorder-message">
         Please complete the form below to request your cinnamon roll order.
-        After submitting, we will review your request and send a confirmation
-        with your pickup details.
+        After submitting, we will review your request and send a confirmation.
     </p>
 
-    <p class="payment-notice">
-    Payment is not collected on the website at this time.
-    We currently accept Zelle, Venmo, and Cash App.
-    </p>
+    <div class="order-notice">
+        <h3>How Payment Works</h3>
 
-    <p class="payment-notice">
-    Orders require payment in full before they are confirmed and added to our baking schedule.
-    After submitting your pre-order request, we will contact you with payment instructions.
-    Once payment is received, your order will be confirmed.
-    </p>
+        <p>
+            After your pre-order request is reviewed and approved, you will receive
+            a secure Square payment link.
+        </p>
+
+        <p>
+            Your order is not confirmed or added to our baking schedule until full
+            payment has been received.
+        </p>
+    </div>
 
     <h2>Pickup Details</h2>
 
@@ -231,11 +233,32 @@
     <input type="hidden" name="estimated_total" id="hidden-total">
     <input type="hidden" name="order_summary" id="hidden-order-summary">
 
+    <div class="policy-agreement">
+
+        <label class="policy-checkbox">
+
+            <input
+            type="checkbox"
+            name="policy_acknowledgment"
+            value="Agreed"
+            required>
+
+            <span>
+                I have reviewed and agree to the
+                <a href="index.html#faq" target="_blank">
+                    cancellation, payment, pickup, and allergy information
+                </a>.
+            </span>
+
+        </label>
+
+    </div>
+
     <button id="submit-order" type="submit">Submit Pre-Order Request</button>
 
     <p class="confirmation-note">
-    Submitting this form does not guarantee availability.
-    Orders are only confirmed after payment has been received and a confirmation has been sent by La Reemée.
+        Submitting this form does not guarantee availability.
+        Your order is confirmed only after approval and full payment.
     </p>
 
 </form>
@@ -256,12 +279,12 @@
         saturday: [
             "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
             "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM",
-            "2:00 PM", "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM"
+            "2:00 PM", "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM"
         ],
         sunday: [
             "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
             "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM",
-            "2:00 PM", "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM"
+            "2:00 PM", "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM"
         ]
     };
 
