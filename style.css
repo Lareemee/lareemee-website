@@ -456,6 +456,7 @@ footer {
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0,0,0,.08);
     margin-top: 180px;
+    margin-left: 0;
 }
 
     .small-title {
@@ -1689,11 +1690,17 @@ footer {
 }
 
 @media (max-width: 600px) {
-    .contact-hero h1 {
-        font-size: 42px;
+    .contact-photo img {
+        height: 260px;
+        border-radius: 20px;
     }
 
-    .contact-name-row {
-        grid-template-columns: 1fr;
+    .contact-page {
+        padding: 50px 6% 70px;
+        gap: 40px;
+    }
+
+    .contact-form-side h2 {
+        font-size: 32px;
     }
 }
