@@ -1243,7 +1243,7 @@ footer {
 }
 .contact-email-btn {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 20px;
     background: #4b1238;
     color: white;
     text-decoration: none;
@@ -1570,7 +1570,7 @@ footer {
 /* CONTACT PAGE */
 
 .contact-hero {
-    padding: 90px 8% 50px;
+    padding: 90px 8% 20px;
     text-align: center;
     background: #fffaf6;
 }
@@ -1605,7 +1605,7 @@ footer {
 .contact-subtext {
     font-size: 17px;
     color: #6b4a35;
-    margin-bottom: 36px;
+    margin-bottom: 12px;
     line-height: 1.7;
 }
 
@@ -1703,4 +1703,10 @@ footer {
     .contact-form-side h2 {
         font-size: 32px;
     }
+}
+
+.contact-email-display {
+    margin-top: 16px;
+    font-size: 15px;
+    color: #9b6b4a;
 }
