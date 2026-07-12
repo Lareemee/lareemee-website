@@ -228,20 +228,28 @@ nav a:hover {
     padding: 90px 8%;
     display: grid;
     grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
+    gap: 80px;
     align-items: center;
     background: #f4eee8;
 }
 
-.story-image img {
+.story-images {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.story-images img {
     width: 100%;
     max-width: 550px;
-    height: auto;
+    height: 750px;
+    object-fit: cover;
     display: block;
     border-radius: 30px;
     box-shadow: 0 15px 35px rgba(0,0,0,.10);
     margin: 0 auto;
 }
+
 
 .story-text h2 {
     font-size: 42px;
